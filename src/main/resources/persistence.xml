@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+   <persistence-unit name="Eclipselink_JPA" transaction-type="RESOURCE_LOCAL">
+   
+      <class>com.tutorialspoint.eclipselink.entity.Persona</class>
+      <class>com.tutorialspoint.eclipselink.entity.PersonalMedico</class>
+      <class>com.tutorialspoint.eclipselink.entity.Paciente</class>
+      <class>com.tutorialspoint.eclipselink.entity.Medico</class>
+      <class>com.tutorialspoint.eclipselink.entity.Interno</class>
+      <class>com.tutorialspoint.eclipselink.entity.TecnologoMedico</class>
+      
+      <properties>
+         <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://ec2-34-200-15-192.compute-1.amazonaws.com:5432/df905cml7arkpe"/>
+         <property name="javax.persistence.jdbc.user" value="tfomjlbrqghscn"/>
+         <property name="javax.persistence.jdbc.password" value="3577eaea93193737738559c690e3fb6ba863450e83e170dc59bb0d2b7010d575"/>
+         <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+         <property name="eclipselink.logging.level" value="FINE"/>
+         <property name="eclipselink.ddl-generation" value="create-tables"/>
+      </properties>
+      
+   </persistence-unit>

@@ -1,6 +1,7 @@
 package com.example.demo.Modelo;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.*;
@@ -30,22 +31,18 @@ public class Hospitalizacion implements Serializable{
 	private int idCaso;
 	
 	@Column (name="fechaIngreso", nullable = false)
-	@JsonFormat(pattern="yyyy-MM-dd", shape=Shape.STRING)
-	private String fechaIngreso;
+	private Date fechaIngreso;
 	
 	@Column (name="horaIngreso", nullable = false)
-	@JsonFormat(pattern="HH:mm", shape=Shape.STRING)
 	private String horaIngreso;
 	
 	@Column(name = "idCama", nullable = false, updatable = false)
 	private int cama;
 	
 	@Column (name="fechaSalida")
-	@JsonFormat(pattern="yyyy-MM-dd", shape=Shape.STRING)
-	private String fechaSalida;
+	private Date fechaSalida;
 	
 	@Column (name="horaSalida")
-	@JsonFormat(pattern="HH:mm", shape=Shape.STRING)
 	private String horaSalida;
 	
 	//Servicios
@@ -80,24 +77,23 @@ public class Hospitalizacion implements Serializable{
 	public void setIdCaso(int idCaso) {
 		this.idCaso = idCaso;
 	}
+	
 
-	public String getFechaIngreso() {
+	public Date getFechaIngreso() {
 		return fechaIngreso;
 	}
 
-	public void setFechaIngreso(String fechaIngreso) {
+	public void setFechaIngreso(Date fechaIngreso) {
 		this.fechaIngreso = fechaIngreso;
 	}
 
-	public String getFechaSalida() {
+	public Date getFechaSalida() {
 		return fechaSalida;
 	}
 
-	public void setFechaSalida(String fechaSalida) {
+	public void setFechaSalida(Date fechaSalida) {
 		this.fechaSalida = fechaSalida;
 	}
-
-	
 
 	public int getCama() {
 		return cama;
@@ -130,6 +126,7 @@ public class Hospitalizacion implements Serializable{
 	public void setServicios(List<Servicio> servicios) {
 		this.servicios = servicios;
 	}
+	
 	
 	
 }

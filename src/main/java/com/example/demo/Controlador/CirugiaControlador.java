@@ -1,5 +1,7 @@
 package com.example.demo.Controlador;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -33,8 +35,13 @@ public class CirugiaControlador {
 	@GetMapping("/{id}")
 	public Cirugia getById(@PathVariable(value="id")Integer id) {
 		return cirugiaRepo.findById(id).orElseGet(()->{
-			throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"Cama no encontrada");
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST,"Cirugia no encontrada");
 		});
+	}
+	
+	@GetMapping("/cedula/{cedula}")
+	public List<Cirugia> getByCedulaPaciente(@PathVariable(value="cedula")String cedula) {
+		return cirugiaRepo.findByCedulaPaciente(cedula);
 	}
 	
 	@GetMapping("/{idCirugia}/{cedula}")

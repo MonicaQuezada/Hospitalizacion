@@ -1,6 +1,7 @@
 package com.example.demo.Modelo;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.*;
 
@@ -25,11 +26,9 @@ public class Emergencia implements Serializable{
 	private String cedulaPaciente;
 	
 	@Column (name="fechaIngreso", nullable = false)
-	@JsonFormat(pattern="yyyy-MM-dd", shape=Shape.STRING)
-	private String fechaIngreso;
+	private Date fechaIngreso;
 	
 	@Column (name="horaIngreso",  nullable = false)
-	@JsonFormat(pattern="HH:mm", shape=Shape.STRING)
 	private String horaIngreso;
 	
 	@Column (name="causa", nullable = false)
@@ -54,11 +53,11 @@ public class Emergencia implements Serializable{
 		this.cedulaPaciente = cedulaPaciente;
 	}
 
-	public String getFechaIngreso() {
+	public Date getFechaIngreso() {
 		return fechaIngreso;
 	}
 
-	public void setFechaIngreso(String fechaIngreso) {
+	public void setFechaIngreso(Date fechaIngreso) {
 		this.fechaIngreso = fechaIngreso;
 	}
 

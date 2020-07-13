@@ -1,6 +1,8 @@
 package com.example.demo.Controlador;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -46,10 +48,9 @@ public class MedicoControlador{
 	}
 	
 	@GetMapping("/especialidad/{idEspecialidad}")
-	public Medico getByIdEspecialidad(@PathVariable(value="idEspecialidad") Integer idEspecialidad) {
+	public List<Medico> getByIdEspecialidad(@PathVariable(value="idEspecialidad") Integer idEspecialidad) {
 		return medicoRepo.findByIdEspecialidad(idEspecialidad);
 	}
-	
 	
 	@PostMapping
 	public Medico guardar(@RequestBody Medico medico) {

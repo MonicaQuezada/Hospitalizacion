@@ -13,6 +13,7 @@ public class Quirofano {
 	
 	@Column (name="descripcion", nullable = false)
 	private String descripcion;
+	
 
 	public int getIdQuirofano() {
 		return idQuirofano;

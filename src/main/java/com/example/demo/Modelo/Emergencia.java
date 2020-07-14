@@ -1,12 +1,9 @@
 package com.example.demo.Modelo;
 
 import java.io.Serializable;
-import java.util.Date;
 
 import javax.persistence.*;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonFormat.Shape;
 
 @Entity
 @Table (name="Emergencia")
@@ -26,7 +23,7 @@ public class Emergencia implements Serializable{
 	private String cedulaPaciente;
 	
 	@Column (name="fechaIngreso", nullable = false)
-	private Date fechaIngreso;
+	private String fechaIngreso;
 	
 	@Column (name="horaIngreso",  nullable = false)
 	private String horaIngreso;
@@ -53,11 +50,11 @@ public class Emergencia implements Serializable{
 		this.cedulaPaciente = cedulaPaciente;
 	}
 
-	public Date getFechaIngreso() {
+	public String getFechaIngreso() {
 		return fechaIngreso;
 	}
 
-	public void setFechaIngreso(Date fechaIngreso) {
+	public void setFechaIngreso(String fechaIngreso) {
 		this.fechaIngreso = fechaIngreso;
 	}
 

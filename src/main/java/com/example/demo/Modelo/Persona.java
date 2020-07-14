@@ -1,7 +1,6 @@
 package com.example.demo.Modelo;
 
 
-import java.util.Date;
 
 import javax.persistence.*;
 
@@ -24,7 +23,7 @@ public class Persona {
 	private String apellido;
 	
 	@Column (name="fechaNacimiento", nullable = false)
-	private Date fechaNacimiento;
+	private String fechaNacimiento;
 	
 	@Column (name="edad", nullable = false)
 	private int edad;
@@ -65,10 +64,10 @@ public class Persona {
 		this.apellido = apellido;
 	}
 	
-	public Date getFechaNacimiento() {
+	public String getFechaNacimiento() {
 		return fechaNacimiento;
 	}
-	public void setFechaNacimiento(Date fechaNacimiento) {
+	public void setFechaNacimiento(String fechaNacimiento) {
 		this.fechaNacimiento = fechaNacimiento;
 	}
 	public int getEdad() {

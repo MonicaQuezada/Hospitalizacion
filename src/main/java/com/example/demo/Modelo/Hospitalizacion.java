@@ -1,8 +1,6 @@
 package com.example.demo.Modelo;
 
 import java.io.Serializable;
-import java.util.Date;
-import java.util.List;
 import javax.persistence.*;
 
 
@@ -41,15 +39,6 @@ public class Hospitalizacion implements Serializable{
 	
 	@Column (name="horaSalida")
 	private String horaSalida;
-	
-	//Servicios
-	 @JoinTable(
-		        name = "Servicios_Hospitalizacion",
-		        joinColumns = @JoinColumn(name = "idHospitalizacion", nullable = false),
-		        inverseJoinColumns = @JoinColumn(name="idServicio", nullable = false)
-		    )
-		    @ManyToMany(cascade = CascadeType.ALL)
-		    private List<Servicio> servicios;
 
 	public int getIdIngreso() {
 		return idIngreso;
@@ -115,13 +104,6 @@ public class Hospitalizacion implements Serializable{
 		this.horaSalida = horaSalida;
 	}
 
-	public List<Servicio> getServicios() {
-		return servicios;
-	}
-
-	public void setServicios(List<Servicio> servicios) {
-		this.servicios = servicios;
-	}
 	
 	
 	

@@ -2,7 +2,6 @@ package com.example.demo.Modelo;
 
 
 import java.io.Serializable;
-import java.util.List;
 
 import javax.persistence.*;
 
@@ -41,10 +40,6 @@ public class Servicio implements Serializable{
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column (name="idServicio", nullable = false, columnDefinition = "serial")
 	private int idServicio;
-	
-	//Hospitalizacion
-    @ManyToMany(mappedBy = "servicios")
-    private List<Hospitalizacion> hospitalizacion;
 
 	public int getIdCaso() {
 		return idCaso;
@@ -109,14 +104,5 @@ public class Servicio implements Serializable{
 	public void setIdServicio(int idServicio) {
 		this.idServicio = idServicio;
 	}
-
-	public List<Hospitalizacion> getHospitalizacion() {
-		return hospitalizacion;
-	}
-
-	public void setHospitalizacion(List<Hospitalizacion> hospitalizacion) {
-		this.hospitalizacion = hospitalizacion;
-	}
-    
     
 }

@@ -28,7 +28,7 @@ public class Hospitalizacion implements Serializable{
 	private int idCaso;
 	
 	@Column (name="fechaIngreso", nullable = false)
-	private Date fechaIngreso;
+	private String fechaIngreso;
 	
 	@Column (name="horaIngreso", nullable = false)
 	private String horaIngreso;
@@ -37,7 +37,7 @@ public class Hospitalizacion implements Serializable{
 	private int cama;
 	
 	@Column (name="fechaSalida")
-	private Date fechaSalida;
+	private String fechaSalida;
 	
 	@Column (name="horaSalida")
 	private String horaSalida;
@@ -74,21 +74,20 @@ public class Hospitalizacion implements Serializable{
 	public void setIdCaso(int idCaso) {
 		this.idCaso = idCaso;
 	}
-	
 
-	public Date getFechaIngreso() {
+	public String getFechaIngreso() {
 		return fechaIngreso;
 	}
 
-	public void setFechaIngreso(Date fechaIngreso) {
+	public void setFechaIngreso(String fechaIngreso) {
 		this.fechaIngreso = fechaIngreso;
 	}
 
-	public Date getFechaSalida() {
+	public String getFechaSalida() {
 		return fechaSalida;
 	}
 
-	public void setFechaSalida(Date fechaSalida) {
+	public void setFechaSalida(String fechaSalida) {
 		this.fechaSalida = fechaSalida;
 	}
 

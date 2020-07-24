@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TELEMED_UDEC</title>
+    <link href="css/stylesheetHopsMedico.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  
+  <body>
+    <!--AQUI VA EL CONTENIDO DE LA PÁGINA-->
+    <!------ Barra Navegador ---------->
+    <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html"> <img src="Image/logoU.png" alt="hospital" width="50" height="70"> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!------ Barra Hospitalización ---------->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item"><a class="nav-link" href="verHospitalizacion.html"><i class="fa fa-hospital-o"></i>Hospitalización</a>
+          </li>
+          <!------ Barra Cirugía ---------->
+          <li class="nav-item">
+            <a class="nav-link" href="verCirugia.html"><i class="fa fa-heartbeat"></i>Cirugía</a>
+          </li>
+          <!------ Barra Emergencia ---------->
+          <li class="nav-item">
+            <a class="nav-link" href="verEmergencia.html"><i class="fa fa-ambulance"></i>Emergencia</a>
+          </li>
+          <!------ Barra Recursos ---------->
+          <li class="nav-item">
+            <a class="nav-link" href="verRecurso.html"><i class="fa fa-bed"></i>Recursos</a>
+          </li>
+          <!------ Barra Servicios ---------->
+          <li class="nav-item">
+            <a class="nav-link" href="verServicios.html"><i class="fa fa-user-md"></i>Servicios</a>
+          </li>
+        </ul>
+
+        <!--Personal médico-->
+        <ul class="navbar-nav ">
+          <li class="nav-item active">
+            <a class="nav-link" href="verPersonal.html"><i class="fa fa-wpforms"></i>Personal médico</a>
+          </li>
+          <!------ Info---------->
+          <li class="nav-item">
+            <a class="nav-link " href="acercaDe.html"><i class="fa fa-info"></i>Info</a>
+          </li>
+        </ul>
+        <!------ Barra de búsqueda ---------->
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" id="anythingSearch" type="submit" disabled>Buscar</button>
+        </form>
+      </div>
+    </nav>
+    <br>
+    <!--AQUI EMPIEZA EL CONTENIDO-->
+    <!--Título de cada página-->
+    <div class="container">
+      <div class="titulo">
+        <h2 style="text-align: center;">Personal médico: Médicos/as</h2>   <!--INGRESE AQUI EL TÍTULO DE LA PÁGINA-->
+        <hr class="inferior">
+      </div>
+      <!--Contenido-->
+      <div class="container-xl">
+        <div class="table-responsive">
+          <div class="table-wrapper">
+            <div class="table-title">
+              <div class="row">
+                <!--Tabla de personal médico-->
+                <div class="col-sm-6">
+                  <h2>Manejo de <b>Médicos/as</b></h2>
+                </div>
+                <!--Botones-->
+                <div class="col-sm-6">
+                  <a href="RegistrarPersonalMedico.html" class="btn btn-success" ><i class="material-icons">&#xE147;</i> <span>Agregar personal</span></a>
+                  <!--a href="#deleteModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Eliminar personal</span></a-->						
+                  <button class="btn btn-primary" onclick="obtenerTodos()"><i class="material-icons">&#xe152;</i> <span>Listar personal</span></button>
+                </div>
+              </div>
+            </div>
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>
+                    <span class="custom-checkbox">
+                        <input type="checkbox" id="selectAll" onclick="selectAll()">
+                        <label for="selectAll"></label>
+                        
+                    </span>
+                  </th>
+                  <!--Cabecera-->
+                  <th scope="col">#</th>
+                  <th scope="col">Cedula</th>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Apellido</th>
+                  <th scope="col">Nacimiento</th>
+                  <th scope="col">Edad</th>
+                  <th scope="col">Sexo</th>
+                  <th scope="col">Dirección </th>
+                  <th scope="col">Correo electrónico</th>
+                  <th scope="col">Teléfono</th>
+                  <th scope="col">Estado </th>
+                  <th scope="col">Fecha de ingreso</th>
+                  <th scope="col">Credencial</th>
+                  <th scope="col">Especialidad</th>
+                  <th scope="col" >Contraseña</th>
+                  <th scope="col">Rol</th>
+                  <th scope="col">Administrar</th>
+                  
+                </tr>
+              </thead>
+              <!--Contenido-->
+              <tbody id=listaTodos>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <!-- Editar Modal HTML -->
+    <div id="editModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form id="editarMed">
+            <div class="modal-header">						
+              <h4 class="modal-title">Editar personal médico</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+              <!-- Id-->					
+              <div class="form-group">
+                <label>IdPersonal</label>
+                <input type="text" id="ModId" name="ModId" class="form-control" disabled>
+              </div>
+              <!-- Cedula-->					
+              <div class="form-group">
+                <label>Cedula</label>
+                <input type="text" id="ModCedula" name="ModCedula" class="form-control" >
+              </div>
+              <!-- Nombre-->					
+              <div class="form-group">
+                <label>Nombre</label>
+                <input type="text" id="ModNombre" name="ModNombre" class="form-control" >
+              </div>
+              <!-- Apellido-->
+              <div class="form-group">
+                <label>Apellido</label>
+                <input type="text" id="ModApellido" name="ModApellido" class="form-control" >
+              </div>
+              <!-- Fecha de nacimiento -->
+              <div class="form-group">
+                <label>Fecha de nacimiento</label>
+                <input type="text" id="ModFechaNacimiento" name="ModFechaNacimiento" class="form-control" >
+              </div>
+              <!-- Edad -->
+              <div class="form-group">
+                <label>Edad</label>
+                <input type="text" id="ModEdad" name="ModEdad" class="form-control" >
+              </div>
+              <!-- Sexo -->
+              <div class="form-group">
+                <label>Sexo</label><br>
+                <input type="text" id="ModSexo" name="ModSexo" class="form-control" >
+              </div>
+              <!-- Direccion-->
+              <div class="form-group">
+                <label>Dirección</label>
+                <input type="text" id="ModDireccion" name="ModDireccion" class="form-control" >
+              </div>
+              <!-- Email -->
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="ModEmail" name="ModEmail" class="form-control" >
+              </div>
+              <!-- Telefono-->
+              <div class="form-group">
+                <label>Teléfono</label>
+                <input type="text" id="ModTelefono" name="ModTelefono" class="form-control" >
+              </div>
+              <!-- Estado civil -->
+              <div class="form-group">
+                <label>Estado civil</label>
+                <input type="text" id="ModEstado" name="ModEstado" class="form-control" >
+              </div>
+              <!-- Fecha de ingreso -->
+              <div class="form-group">
+                <label>Fecha de ingreso</label>
+                <input type="text" id="ModFechaIngreso" name="ModFechaIngreso" class="form-control" >
+              </div>
+              <!-- Médico: Especialidad -->
+              <div class="form-group">
+                <label>Especialidad</label>
+                <input type="number" id="ModIdEspecialidad" name="ModIdEspecialidad" class="form-control" >
+              </div>
+              <!-- Médico: Credencial -->
+              <div class="form-group">
+                <label>Credencial</label>
+                <input id="ModCredencial" type="cred" name="ModCredencial"class="form-control" >
+              </div>
+              <!-- Médico: Contrasenia -->
+              <div class="form-group">
+                <label>Contraseña</label>
+                <input id="ModContraseña" type="password" name="ModContraseña"class="form-control" >
+              </div>
+              <!-- Médico: Rol -->
+              <div class="form-group">
+                <label>Rol</label>
+                <input id="ModRol" type="text" name="ModRol"class="form-control" >
+              </div> 
+            </div>
+            <!-- Botones -->
+            <div class="modal-footer">
+              <button class="btn btn-default" data-dismiss="modal">Cancelar</button>
+              <button class="btn btn-success" type="submit">Guardar</button>  
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Eliminar Modal HTML -->
+    <div id="deleteModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form id="eliminarForm">
+            <div class="modal-header">						
+              <h4 class="modal-title">Eliminar personal</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">					
+              <p>¿Está seguro de eliminar los registros?</p>
+              <p class="text-danger"><small>Esta acción no puede ser deshecha.</small></p>
+            </div>
+            <div class="modal-footer">
+              <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+              <button type="submit" class="btn btn-danger" value="Eliminar">Eliminar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--AQUI TERMINA EL CONTENIDO-->
+    
+   
+    <script src="js/scriptPersonalMedico.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>   
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  </body>
+</html>

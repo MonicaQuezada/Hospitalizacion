@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TELEMED_UDEC</title>
+  <link href="css/stylesheet.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>   
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <style>
+    .bcontent {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <!--AQUI VA EL CONTENIDO DE LA PÁGINA-->
+  <!------ Barra Navegador ---------->
+  <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html"> <img src="Image/logoU.png" alt="hospital" width="50" height="70"> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!------ Barra Hospitalizacion ---------->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item ">
+          <a class="nav-link " href="verHospitalizacion.html">
+            <i class="fa fa-hospital-o"></i>Hospitalización
+          </a>
+        </li>
+        <!------ Barra Cirugía ---------->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="verCirugia.html" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-heartbeat"></i>Cirugía
+          </a>
+          <!------ Opciones Cirugía ---------->
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="verCirugia.html">Listar cirugías</a>
+            <hr>
+            <a class="dropdown-item" href="RegistrarCirugía.html">Agregar cirugía</a>
+            <hr>
+            <a class="dropdown-item" href="verQuirofano.html">Quirófanos</a>
+          </div>
+        </li>
+        <!------ Barra Emergencias ---------->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="verEmergencia.html" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-ambulance"></i>Emergencia
+          </a>
+          <!------ Opciones Emergencias ---------->
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="verEmergencia.html">Listar emergencias</a>
+            <hr>
+            <a class="dropdown-item" href="RegistrarEmergencia.html">Agregar emergencia</a>
+            <hr>
+            <a class="dropdown-item" href="verAsistenciaE.html">Asistencia médica</a>
+          </div>
+        </li>
+        <!------ Barra Recursos ---------->
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="verRecurso.html" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-bed"></i>Recursos
+          </a>
+          <!------ Opciones Recursos ---------->
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="verRecurso.html">Listar recursos</a>
+            <hr>
+            <a class="dropdown-item" href="RegistrarRecurso.html">Agregar recurso</a>
+          </div>
+        </li>
+        <!------ Barra Servicios ---------->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="verServicios.html" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-user-md"></i>Servicios
+          </a>
+          <!------ Opciones Servicios ---------->
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="verServicios.html">Listar servicios</a>
+            <hr>
+            <a class="dropdown-item" href="RegistrarServicio.html">Agregar servicio</a>
+          </div>
+        </li>
+      </ul>
+
+      <!--Personal médico-->
+      <ul class="navbar-nav ">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="verPersonal.html" id="navbarDropdown" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-wpforms"></i>Personal médico
+          </a>
+          <!------ Opciones Personal Médico  ---------->
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="verPersonal.html">Listar personal</a>
+            <hr>
+            <a class="dropdown-item" href="RegistrarPersonal.html">Agregar personal</a>
+            <hr>
+            <a class="dropdown-item" href="verEspecialidad.html">Especialidades</a>
+          </div>
+        </li>
+        <!------ Info---------->
+        <li class="nav-item ">
+          <a class="nav-link " href="acercaDe.html" aria-expanded="false">
+            <i class="fa fa-info"></i>Info</a>
+        </li>
+      </ul>
+      <!------ Barra Buscador ---------->
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+      </form>
+    </div>
+  </nav>
+  <br>
+
+  <!--Título de cada página-->
+  <div class="container">
+    <div class="titulo">
+      <h2 style="text-align: center;">Registro de Recursos</h2>
+      <!--INGRESE AQUI EL TÍTULO DE LA PÁGINA-->
+      <hr class="inferior">
+    </div>
+
+    <!--Menú lateral-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h2>Secciones</h2>
+          <hr>
+          <nav class="navbar navbar-light bg-light">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="RegistrarArea.html">Áreas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="RegistrarCama.html">Camas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="RegistrarQuirofano.html">Quirófanos</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- Seccion: Registro -->
+        <br>
+        <div class="col-lg-9">
+          <section class="register">
+            <div class="container">
+              <br>
+              <!------ Inicio formulario ---------->
+              <div class="col-lg-9 ">
+                <h3 style="text-align: left;"><b>Formulario de registro: Quirófanos</b></h3>
+                <div class="card card-signin my-2">
+                  <div class="card-body">
+                    <form id="quirofanoForm" action="#" method="post">
+                      <!--Descripcion -->
+                      <div class="input-group col-lg-9 mb-4">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text bg-white px-4 border-md border-right-0">
+                            <i class="fa fa-folder text-muted"></i>
+                          </span>
+                        </div>
+                        <input id="descripcion" type="text" name="descp" placeholder="Descripción"
+                          class="form-control bg-white border-left-0 border-md">
+                      </div>
+                      <!-- Enviar Button -->
+                      <div class="form-group col-lg-9 mb-4">
+                        <button class="btn btn-primary w-100" style="text-align: center;"
+                          type="submit">Registrar</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+
+    <!--AQUI TERMINA EL CONTENIDO-->
+    <script src="js/quirofano.js"></script>
+</body>
+
+</html>

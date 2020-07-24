@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TELEMED_UDEC</title>
+    <link href="css/stylesheetHops.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <script type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </head>
+
+  <body>
+    <!--AQUI VA EL CONTENIDO DE LA PÁGINA-->
+
+    <!------ Barra Navegador ---------->
+    <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html"> <img src="Image/logoU.png" alt="hospital" width="50" height="70"> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!------ Barra Hospitalización ---------->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ">
+            <a class="nav-link" href="verHospitalizacion.html">
+              <i class="fa fa-hospital-o"></i>
+              Hospitalización
+            </a>
+          </li>
+          <!------ Barra Cirugía ---------->
+          <li class="nav-item ">
+            <a class="nav-link" href="verCirugia.html">
+              <i class="fa fa-heartbeat"></i>
+              Cirugía
+            </a>
+          </li>
+          <!------ Barra Emergencia ---------->
+          <li class="nav-item ">
+            <a class="nav-link" href="verEmergencia.html">
+              <i class="fa fa-ambulance"></i>
+              Emergencia
+            </a>
+          </li>
+          <!------ Barra Recursos ---------->
+          <li class="nav-item ">
+            <a class="nav-link" href="verRecurso.html">
+              <i class="fa fa-bed"></i>
+              Recursos
+            </a>
+          </li>
+          <!------ Barra Servicios ---------->
+          <li class="nav-item active">
+            <a class="nav-link" href="verServicios.html">
+              <i class="fa fa-user-md"></i>
+              Servicios
+            </a>
+          </li>
+        </ul>
+
+        <!--Personal médico-->
+        <ul class="navbar-nav ">
+          <li class="nav-item ">
+            <a class="nav-link" href="verPersonal.html">
+              <i class="fa fa-wpforms"></i>
+              Personal médico
+            </a>
+          </li>
+          <!------ Info---------->
+          <li class="nav-item ">
+            <a class="nav-link " href="acercaDe.html" aria-expanded="false">
+              <i class="fa fa-info"></i>Info</a>
+          </li>
+        </ul>
+
+        <br>
+        <!------ Barra de búsqueda ---------->
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search" disabled>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" disabled>Buscar</button>
+        </form>
+
+    </nav>
+    <br>
+
+
+
+    <!--AQUI EMPIEZA EL CONTENIDO-->
+
+    <!--Título de cada página-->
+    <div class="container">
+      <div class="titulo">
+        <h2 style="text-align: center;">Registro de Servicios</h2>
+        <!--INGRESE AQUI EL TÍTULO DE LA PÁGINA-->
+        <hr class="inferior">
+      </div>
+
+      <!--Contenido-->
+      <div class="container-xl">
+        <div class="table-responsive">
+          <div class="table-wrapper">
+            <div class="table-title">
+              <div class="row">
+                <!--Tabla de servicios-->
+                <div class="col-sm-6">
+                  <h2>Manejo de <b>Servicios</b></h2>
+                </div>
+                <!--Botones add / delete -->
+                <div class="col-sm-6">
+                  <a href="RegistrarServicio.html" class="btn btn-success"><i class="material-icons">&#xE147;</i>
+                    <span>Agregar servicio</span></a>
+                  <!--a href="#deleteModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i>
+                    <span>Eliminar servicio</span></a-->
+                    <button class="btn btn-primary" onclick="obtenerTodos()"><i class="material-icons">&#xe152;</i><span>Listar servicios</span></button>
+                </div>
+              </div>
+            </div>
+            <table class="table table-striped table-hover">
+              <thead>
+                <tr>
+                  <th>
+                    <span class="custom-checkbox">
+                      <input type="checkbox" id="selectAll">
+                      <label for="selectAll"></label>
+                    </span>
+                    <!--Cabecera-->
+                  </th>
+                  <th>Caso</th>
+                  <th>Paciente</th>
+                  <th>Descripción</th>
+                  <th>Costo</th>
+                  <th>Cantidad</th>
+                  <th>Modulo</th>
+                  <th>Tabla</th>
+                  <th>Servicio</th>
+                  <th>Administrar</th>
+                </tr>
+              </thead>
+              <tbody id=listaTodos>
+
+              </tbody>
+            </table>
+            
+          </div>
+        </div>
+      </div>
+      <!-- Editar Modal HTML -->
+      <div id="editModal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form id=modificar>
+              <div class="modal-header">						
+                <h4 class="modal-title">Editar servicio</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              </div>
+              <div class="modal-body">
+                <!--Caso -->
+                <div class="form-group">
+                  <label>Caso</label>
+                  <input id="ModIdCaso" type="text" name="ModIdCaso" class="form-control" disabled>
+                </div>
+                <!--Paciente -->
+                <div class="form-group">
+                  <label>Paciente</label>
+                  <input id="ModPaciente" type="text" name="ModPaciente" class="form-control ">
+                </div>
+                <!-- Desc -->
+                <div class="form-group">
+                  <label>Descripción</label>
+                  <input id="ModDesc" type="text" name="ModDesc" class="form-control ">                                  
+                </div>
+                <!-- Valor -->
+                <div class="form-group">
+                  <label>Valor </label>
+                  <input  type="text" id="ModValor"  name="ModValor"  class="form-control">
+                </div>
+                <!-- Cant -->
+                <div class="form-group">
+                  <label >Cantidad </label><br>
+                  <input type="text" id="ModCantidad" name="ModCantidad" required class="form-control">
+                </div>
+                <!-- Mod -->
+                <div class="form-group">
+                  <label>Modulo</label>
+                  <input type="text" id="ModModulo" name="ModModulo" required class="form-control">
+                </div>
+                <!-- Tabla -->
+                <div class="form-group">
+                  <label>Tabla </label><br>
+                  <input type="text" id="ModTabla" name="ModTabla"   class="form-control" >
+                </div>
+                <!-- Servicio -->
+                <div class="form-group">
+                  <label >Servicio </label><br>
+                  <input type="text" id="ModServicio" name="ModServicio" required class="form-control">
+                </div>
+              </div>
+              <div class="modal-footer">
+                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                <button type="submit" class="btn btn-success" value="Guardar">Guardar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Eliminar Modal HTML -->
+      <div id="deleteModal" class="modal fade">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <form>
+              <div class="modal-header">
+                <h4 class="modal-title">Eliminar servicio</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              </div>
+              <div class="modal-body">
+                <p>¿Está seguro de eliminar los registros?</p>
+                <p class="text-danger"><small>Esta acción no puede ser deshecha.</small></p>
+              </div>
+              <div class="modal-footer">
+                <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancelar">
+                <input type="submit" class="btn btn-danger" value="Eliminar">
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!--AQUI TERMINA EL CONTENIDO-->
+
+  </body>
+  <script src="js/scriptServicios.js"></script>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TELEMED_UDEC</title>
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <!--AQUI VA EL CONTENIDO DE LA PÁGINA-->
+    <!------ Barra Navegador ---------->
+    <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html"> <img src="Image/logoU.png" alt="hospital" width="50" height="70"> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    <!------ Inicio ---------->
+      <div>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active ">
+            <h2><a class="nav-link active"  role="title" style="text-align: center;">TELEMED_UDEC</a></h2>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br><br><br>
+    <section class="login">
+      <div class="container">
+        <div class="row vdivide">
+          <!--Ingresar con email-->
+          <div class="col-sm-9 col-md-7 col-lg-5 mx-auto bg-light">
+            <div class="card-body">
+              <form id="form-signin">
+                <h4 style="text-align: left;">Bienvenido</h4>
+                <hr><br>
+                <!--email-->
+                <div class="form-label-group">
+                  <label>Cedula</label>
+                  <input type="text" id="cedula" class="form-control"  required autofocus class="form-control">
+                </div><br>
+                <!--password-->
+                <div class="form-label-group">
+                  <label>Contraseña</label>
+                  <input type="password" id="password" class="form-control" class="form-control" required>
+                </div><br>
+                <!--recordar password>
+                <div class="custom-control custom-checkbox mb-3">
+                  <input type="checkbox" class="custom-control-input" id="customCheck1">
+                  <label class="custom-control-label" for="customCheck1" >Recordar contraseña</label>
+                </div-->
+                <hr><br>
+                <!--Boton enviar-->
+                <a href="verHospitalizacion.html" class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</a> <br> 
+                <!--p style="text-align: center;"><a href="recuperarContraseña.html" class="text-secondary ml-10" ><u>Recuperar contraseña</u> </a></p><hr>
+                <p style="text-align: center;"> En caso de no tener cuenta <a href="RegistrarPersonal.html" class="text-secondary ml-10" ><u> ¡Registrarse!</u> </a></p-->
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--AQUI TERMINA EL CONTENIDO-->
+    <script src="js/loginMedico.js"></script>
+  </body>
+</html>

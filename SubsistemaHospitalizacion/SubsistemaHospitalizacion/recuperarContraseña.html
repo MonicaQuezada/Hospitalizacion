@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TELEMED_UDEC</title>
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <!--AQUI VA EL CONTENIDO DE LA PÁGINA-->
+    <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html"> <img src="Image/logoU.png" alt="hospital" width="50" height="70"> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!------ Inicio ---------->
+      <div>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active ">
+            <h2><a class="nav-link active"  role="title" style="text-align: center;">TELEMED_UDEC</a></h2>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <br>
+    <br>
+    <br>
+    
+    
+    <!-- Seccion: recuperar password -->
+    <section class="password">
+      <div class="form-gap">
+        <div class="container">
+          <h2 class="text-center"><b>¿Olvidó su contraseña?</b></h2><br>
+        <div class="row">
+          <div class="col-sm-9 col-md-3 col-lg-5 mx-auto bg-light">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="text-center">
+                  <!-- descripcion -->
+                  <br><p style="text-align: center;">Ingrese una contraseña nueva para restablecer su cuenta.</p><br>
+                  <div class="panel-body">
+                    <form id="contraseña-form" role="form" autocomplete="off" class="form" method="post">
+                      <div class="form-group">
+                        <!-- Cedula-->
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                          <input id="cedula" name="cedula" placeholder="Cedula" class="form-control"  type="text">
+                        </div> <br>
+                        <!-- Password-->
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                          <input id="password" name="password" placeholder="Nueva contraseña" class="form-control"  type="password">
+                        </div> <br>
+                        <!-- Confirm Password-->
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-envelope color-blue"></i></span>
+                          <input id="passwordConfirm" name="passwordConfirm" placeholder="Confirmar contraseña" class="form-control"  type="password">
+                        </div>
+                      </div>
+                      <br>
+                      <!-- boton -->
+                      <div class="form-group">
+                        <input name="recover-submit" class="btn btn-lg btn-secondary btn-block" value="Restablecer contraseña" type="submit">
+                      </div>
+                      <input type="hidden" class="hide" name="token" id="token" value="">
+                    </form>
+                    <br>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>  
+    <!--AQUI TERMINA EL CONTENIDO-->
+
+    <script src="recuperarContraseña.js"></script>
+  </body>
+</html>

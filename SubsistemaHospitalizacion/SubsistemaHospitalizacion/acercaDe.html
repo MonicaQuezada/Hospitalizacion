@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TELEMED_UDEC</title>
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!--AQUI VA EL CONTENIDO DE LA PÁGINA-->
+    <!------ Barra Navegador ---------->
+    <nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="index.html"> <img src="Image/logoU.png" alt="hospital" width="50" height="70"> </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!------ Barra Hospitalización ---------->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="verHospitalizacion.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-hospital-o"></i>Hospitalización
+            </a>
+            <!------ Opciones Hospitalización ---------->
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="verHospitalizacion.html">Listar ingresos</a><hr>
+              <a class="dropdown-item" href="RegistrarHospitalizacion.html">Agregar hospitalización</a><hr>
+              <a class="dropdown-item" href="verAsistenciaH.html">Asistencia médica</a>
+            </div>
+          </li>
+          <!------ Barra Cirugía ---------->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="verCirugia.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-heartbeat"></i>Cirugía
+            </a>
+            <!------ Opciones Cirugía ---------->
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="verCirugia.html">Listar cirugías</a>}<hr>
+              <a class="dropdown-item" href="RegistrarCirugía.html">Agregar cirugía</a><hr>
+              <a class="dropdown-item" href="verRecurso.html">Quirófanos</a>
+            </div>
+          </li>
+          <!------ Barra Emergencia ---------->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="verEmergencia.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-ambulance"></i>Emergencia            
+            </a>
+            <!------ Opciones Emergencia ---------->
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="verEmergencia.html">Listar emergencias</a><hr>
+              <a class="dropdown-item" href="RegistrarEmergencia.html">Agregar emergencia</a><hr>
+              <a class="dropdown-item" href="verAsistenciaE.html">Asistencia médica</a>
+            </div>
+          </li>
+          <!------ Barra Recursos ---------->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="verRecurso.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-bed"></i>Recursos
+            </a>
+            <!------ Opciones Recursos ---------->
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="verRecurso.html">Listar recursos</a><hr>
+              <a class="dropdown-item" href="RegistrarRecurso.html">Agregar recursos</a>
+            </div>
+          </li>
+          <!------ Barra Servicios ---------->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="verServicios.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-user-md"></i>Servicios            
+            </a>
+            <!------ Opciones Servicios ---------->
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="verServicios.html">Listar servicios</a><hr>
+              <a class="dropdown-item" href="RegistrarServicio.html">Agregar servicios</a>
+            </div>
+          </li>
+        </ul>
+        <!--Personal médico-->
+        <ul class="navbar-nav ">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="verPersonal.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-wpforms"></i>Personal médico
+            </a>
+            <!------ Opciones Personal Médico ---------->
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="verPersonal.html">Listar personal</a><hr>
+              <a class="dropdown-item" href="RegistrarPersonal.html">Agregar personal</a><hr>
+              <a class="dropdown-item" href="verEspecialidad.html">Especialidades</a>
+            </div>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="acercaDe.html" aria-expanded="false">
+              <i class="fa fa-info"></i>Info</a>
+          </li>
+        </ul>
+        <!------ Barra de búsqueda ---------->
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Buscar" aria-label="Search" disabled>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit" disabled>Buscar</button>
+        </form>
+      </div>
+    </nav><br><br><br>
+    <!-- Seccion: login -->
+    <section class="container">
+      <div class="form">
+        <h2><b>Acerca de:</b></h2><hr><br>
+        <p><b>Subsistema: </b>Hospitalización, Emergencia y Cirugía.</p>
+        <p><b>Autores: </b>Erika Miller, Mónica Quezada.</p>
+        <p><b>Docente: </b>Ing. Villie Morocho.</p>
+        <p><b>Facultad: </b>Facultad de Ingeniería.</p>
+        <p><b>Universidad: </b>Universidad de Cuenca.</p>
+        <p>Este módulo fue desarrollado como parte de la materia Base de Datos II, periodo marzo-julio 2020.</p>
+      </div>
+    </section>
+    <!--AQUI TERMINA EL CONTENIDO-->
+  </body>
+</html>

@@ -31,7 +31,7 @@ public class Hospitalizacion implements Serializable{
 	@Column (name="horaIngreso", nullable = false)
 	private String horaIngreso;
 	
-	@Column(name = "idCama", nullable = false, updatable = false)
+	@Column(name = "idCama", nullable = false)
 	private int cama;
 	
 	@Column (name="fechaSalida")
